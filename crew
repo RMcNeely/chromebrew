@@ -12,8 +12,13 @@ require 'fileutils'
 CREW_PREFIX = '/usr/local'
 CREW_LIB_PATH = CREW_PREFIX + '/lib/crew/'
 CREW_CONFIG_PATH = CREW_PREFIX + '/etc/crew/'
-CREW_BREW_DIR = CREW_PREFIX + '/tmp/crew/'
 CREW_DEST_DIR = CREW_BREW_DIR + 'dest'
+
+if Dir.exists?("#{CREW_PREFIX}crew")
+  CREW_BREW_DIR = CREW_PREFIX + '/crew/'
+else
+  CREW_BREW_DIR = CREW_PREFIX + '/tmp/crew/'
+end  
 
 # Set CREW_NPROC from environment variable or `nproc`
 if ENV["CREW_NPROC"].to_s == ''
