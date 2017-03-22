@@ -12,6 +12,12 @@ CREW_PACKAGES_PATH=$CREW_LIB_PATH/packages
 
 architecture=$(uname -m)
 
+if [ $1 ]; then
+  CREW_BREW_DIR=$CREW_PREFIX/$1/
+  else
+  CREW_BREW_DIR=$CREW_PREFIX/tmp/crew/
+fi
+
 if [ $EUID -eq 0 ]; then
   echo 'Chromebrew should not be run as root.'
   exit 1;
