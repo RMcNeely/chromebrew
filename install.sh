@@ -13,6 +13,7 @@ CREW_PACKAGES_PATH=$CREW_LIB_PATH/packages
 architecture=$(uname -m)
 
 if [ $1 ]; then
+  CREW_PREFIX=/usr
   CREW_BREW_DIR=$CREW_PREFIX/$1/
   else
   CREW_BREW_DIR=$CREW_PREFIX/tmp/crew/
