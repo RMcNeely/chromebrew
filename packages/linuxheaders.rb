@@ -1,15 +1,19 @@
 require 'package'
 
 class Linuxheaders < Package
-  version '3.18'
+  description 'Linux headers for Chrome OS.'
+  homepage ''
+  version '3.18-1'
   binary_url ({
-    armv7l: "https://github.com/jam7/chromebrew/releases/download/newtoolchains/linux-headers-3.18-chromeos-armv7l.tar.xz",
-    i686: "https://github.com/jam7/chromebrew/releases/download/newtoolchains/linux-headers-3.18-chromeos-i686.tar.xz",
-    x86_64: "https://github.com/jam7/chromebrew/releases/download/newtoolchains/linux-headers-3.18-chromeos-x86_64.tar.xz",
+    aarch64: 'https://github.com/jam7/chrome-cross/releases/download/v1.7/linux-headers-3.18-chromeos-armv7l.tar.xz',
+    armv7l:  'https://github.com/jam7/chrome-cross/releases/download/v1.7/linux-headers-3.18-chromeos-armv7l.tar.xz',
+    i686:    'https://github.com/jam7/chrome-cross/releases/download/v1.7/linux-headers-3.18-chromeos-i686.tar.xz',
+    x86_64:  'https://github.com/jam7/chrome-cross/releases/download/v1.7/linux-headers-3.18-chromeos-x86_64.tar.xz',
   })
   binary_sha1 ({
-    armv7l: "fad98da3de461b0b08298c5a1ec07cca53eed008",
-    i686: "4142a609534383c99123fb43016745746589922b",
-    x86_64: "716f50b255d6bd3c4039a92cbd20d4e887e25bb7",
+    aarch64: '783acca9a3afe6c77ecd93f10930c779c3d625a5',
+    armv7l:  '783acca9a3afe6c77ecd93f10930c779c3d625a5',
+    i686:    '965234573d99c99926feb759cdf6e4a70e97c6a0',
+    x86_64:  '87a6f22e6f92614279eba518d6e00432c09d8671',
   })
 end
